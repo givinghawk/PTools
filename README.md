@@ -13,3 +13,5 @@ curl -Ls [https://api.github.com/repos/TommyTran732/Pterodactyl-Script/releases/
 
 bash ptools.sh
 ```
+
+![image](https://user-images.githubusercontent.com/72263189/172023504-4bc19138-0991-4f3f-8124-de27cf484042.png)
