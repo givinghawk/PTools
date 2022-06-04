@@ -1,7 +1,7 @@
 #!/bin/bash
 echo -e "\e[1;41m WARNING: This script will not work on CentOS! If you are running CentOS then please do not use this script! \e[0m"
 PS3='Choose an option: '
-options=("Turn on maintainence mode" "Turn off maintainence mode" "Update Pterodactyl" "Quit")
+options=("Turn on maintainence mode" "Turn off maintainence mode" "Update Pterodactyl" "Update Wings" "Quit")
 select slec in "${options[@]}"; do
     case $slec in
         "Turn on maintainence mode")
@@ -27,6 +27,13 @@ select slec in "${options[@]}"; do
             echo -e "\e[1;42m Updated Pterodactyl! \e[0m"
             exit
             ;;
+            "Update Wings")
+               curl -L -o /usr/local/bin/wings "https://github.com/pterodactyl/wings/releases/latest/download/wings_linux_$([[ "$(uname -m)" == "x86_64" ]] && echo "amd64" || echo "arm64")"
+               chmod u+x /usr/local/bin/wings
+               systemctl restart wings
+               echo -e "\e[1;42m Updated Wings! \e[0m"
+               exit
+           ;;
 	"Quit")
 	    exit
 	    ;;
