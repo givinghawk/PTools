@@ -6,7 +6,7 @@ Usage of PTools
 
 ```bash
 
-curl -Ls [https://api.github.com/repos/TommyTran732/Pterodactyl-Script/releases/latest](https://raw.githubusercontent.com/givinghawk/PTools/main/ptools.sh) | grep -wo "https.*ptools.sh" | wget -qi -
+curl -Ls https://raw.githubusercontent.com/givinghawk/PTools/main/ptools.sh | grep -wo "https.*ptools.sh" | wget -qi -
 ```
 
 ```bash
